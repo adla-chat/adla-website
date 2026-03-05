@@ -1,0 +1,98 @@
+body {
+  background-color: rgb(18, 18, 18);
+  color: rgb(50, 200, 50);
+  font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
+  overflow: hidden;
+  position: fixed;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgb(50, 200, 50);
+  background-color: black;
+  border: 2px solid rgb(50, 200, 50);
+  font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
+}
+
+.content-container {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  color: rgb(10, 120, 10);
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes pop {
+  0%, 95%, 100% {
+    opacity: 0;
+  }
+  96%, 98% {
+    opacity: .2;
+  }
+}
+
+.content-container h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  position: relative;
+  animation: flicker 2.5s infinite;
+}
+
+.content-container h1::after {
+  content: 'adla';
+  position: absolute;
+  left: 5px; /* horizontal offset */
+  top: 5px;  /* vertical offset */
+  color: greenyellow;
+  z-index: -1;
+  pointer-events: none;
+  animation: pop 1.5s infinite;
+}
+
+.content-container h1::before {
+  content: 'adla';
+  position: absolute;
+  left: -7px; /* horizontal offset */
+  top: -7px;  /* vertical offset */
+  color: greenyellow;
+  z-index: -1;
+  pointer-events: none;
+  animation: pop 1.3s infinite;
+}
