@@ -34,6 +34,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        .legal-links {
+            margin-top: 24px;
+            font-size: 11px;
+            color: rgba(50, 200, 50, 0.35);
+        }
+
+        .legal-links a {
+            color: rgba(50, 200, 50, 0.4);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(50, 200, 50, 0.2);
+            margin: 0 8px;
+        }
+
+        .legal-links a:hover {
+            color: rgb(50, 200, 50);
+            border-bottom-color: rgb(50, 200, 50);
+        }
+    </style>
 </head>
 <body>
     <p style="font-size: 90px; font-weight: bold; overflow: hidden;">
@@ -63,5 +83,9 @@
             <input type="email" name="email" placeholder="please enter your email" required>
             <button type="submit">sign up</button>
         </form>
+        <div class="legal-links">
+            <a href="/terms.html">terms of service</a>
+            <a href="/privacy.html">privacy policy</a>
+        </div>
     </div>
 </body>
