@@ -1,9 +1,67 @@
+footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid rgba(50, 200, 50, 0.1);
+  font-size: 11px;
+  color: rgba(50, 200, 50, 0.25);
+}
+
+footer a {
+  color: rgba(50, 200, 50, 0.4);
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+footer a:hover {
+  color: rgb(50, 200, 50);
+}
+/* Gallery for app screenshots */
+.screenshots-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto 0 auto;
+  max-width: 1200px;
+  padding: 24px 0;
+}
+
+.screenshot-item {
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  padding: 18px 18px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  transition: transform 0.2s;
+}
+
+.screenshot-item:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(50,200,50,0.15);
+}
+
+.screenshot-item img {
+  width: 240px;
+  height: 480px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.screenshot-desc {
+  color: rgb(50, 200, 50);
+  font-size: 15px;
+  text-align: center;
+  margin-top: 2px;
+  font-family: 'Roboto Mono', monospace;
+}
 body {
   background-color: rgb(18, 18, 18);
   color: rgb(50, 200, 50);
   font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
-  overflow: hidden;
-  position: fixed;
 }
 
 form {
@@ -22,11 +80,12 @@ form input {
 
 form button {
   padding: 10px;
-  border: none;
   cursor: pointer;
   color: rgb(50, 200, 50);
   background-color: black;
   border: 2px solid rgb(50, 200, 50);
+  border-radius: 10px;
+  width: 100%;
   font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
 }
 
@@ -34,15 +93,11 @@ form button {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 p {
